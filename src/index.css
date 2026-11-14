@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand colors */
+  --color-primary: #FFC928;
+  --color-primary-hover: #F2B810;
+  --color-primary-soft: #FFE7A3;
+  --color-dark: #171717;
+
+  /* Backgrounds */
+  --color-background: #FFF9ED;
+  --color-surface: #FFFFFF;
+
+  /* Text */
+  --color-text: #171717;
+  --color-text-muted: #77736B;
+
+  /* Typography */
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* UI */
+  --radius-card: 20px;
+  --radius-button: 999px;
+  --shadow-card: 0 8px 24px rgba(23, 23, 23, 0.06);
+  --shadow-floating: 0 18px 40px rgba(23, 23, 23, 0.12);
+}
+
+@layer base {
+  html {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+  }
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.saffra-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(23, 23, 23, 0.06);
+}
+
+.saffra-btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+  border-radius: var(--radius-button);
+  font-family: var(--font-body);
+  font-weight: 600;
+  transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1), background-color 160ms ease, box-shadow 160ms ease;
+  box-shadow: 0 6px 18px rgba(255, 201, 40, 0.35);
+}
+
+.saffra-btn-primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+
+.saffra-btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.saffra-btn-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}

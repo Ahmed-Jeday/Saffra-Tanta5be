@@ -1,0 +1,6 @@
+{
+  "name": "Saffra — Vote. Transparently.",
+  "description": "Plateforme de vote universitaire moderne, sécurisée et anonyme basée sur la blockchain et les preuves Zero-Knowledge Semaphore v4.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
